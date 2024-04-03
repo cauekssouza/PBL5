@@ -1,13 +1,15 @@
-class Playlist extends Spotify {
-    private String descricao;
-    private int numeroDeMusicas;
+public class playlist extends Spotify {
+    protected String descricao;
+    protected int numeroDeMusicas;
 
-    public Playlist(String artista, String albumOrSingle, int duracao, String playlist, int artistaMerch, String evento, String descricao, int numeroDeMusicas) {
-        super(artista, albumOrSingle, duracao, playlist, artistaMerch, evento);
+    // Constructor
+    public playlist(String artista, String albumOrSingle, String duracao, String genero, int numeroDeMusicas, String local, String data, int artistaMerchSpotify, String descricao, int numeroDeMusicasPlaylist) {
+        super(artista, albumOrSingle, duracao, data, artistaMerchSpotify, descricao);
         this.descricao = descricao;
-        this.numeroDeMusicas = numeroDeMusicas;
+        this.numeroDeMusicas = numeroDeMusicasPlaylist;
     }
 
+    /* Getters and Setters */
     public String getDescricao() {
         return descricao;
     }
@@ -16,11 +18,11 @@ class Playlist extends Spotify {
         this.descricao = descricao;
     }
 
-    public int getNumeroDeMusicas() {
+    public int getNumeroDeMusicasPlaylist() {
         return numeroDeMusicas;
     }
 
-    public void setNumeroDeMusicas(int numeroDeMusicas) {
-        this.numeroDeMusicas = numeroDeMusicas;
+    public void setNumeroDeMusicasPlaylist(int numeroDeMusicasPlaylist) {
+        this.numeroDeMusicas = numeroDeMusicasPlaylist;
     }
 }
