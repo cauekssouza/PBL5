@@ -1,16 +1,6 @@
 public class Musica extends Spotify {
-    private String genero;
-    // Construtor 
-    public Musica(String artista, String albumOrsingle, int duração, String playlist, int artistaMerch, String evento,String genero){
-       super(artista, albumOrsingle, duração, playlist, artistaMerch, evento);
-       this.genero = genero; 
+    // Constructor
+    public Musica(String artista, String albumOrSingle, String duracao, String genero, String evento, String playlist, int artistaMerchSpotify) {
+        super(artista, albumOrSingle, duracao, playlist, artistaMerchSpotify, evento);
     }
-    /*Getters e Setters */
-    public String getGenero(){
-        return genero;
-    }
-    public void setGenero(String genero){
-        this.genero = genero;
-    }
-
 }
